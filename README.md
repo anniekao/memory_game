@@ -12,9 +12,7 @@ learning goals:
 - Know how to initialize an Array with a default value
 - Know how to use duck typing to allow different classes to interact with your program
 
-Out of these goals, I hope that I will better understand writing classes and getting classes 
-to interact with one another to create a fully-formed and functioning program. Of course, I don't expect this program to be perfect,
-but I do hope that my knowledge of Ruby and the logic of programming will naturally improve by attempting this assignment.
+Out of these goals, I hope that I will better understand structuring a larger program, writing and getting classes to interact with one another to create a fully-formed and functioning program. Of course, I don't expect this it to be perfect, but I do hope that my knowledge of Ruby and the logic behind the game will naturally improve by attempting this assignment.
 #Tech
 As stated above, I am programming this game as part of the online Ruby curriculum offered by App Academy and, therefore, only used
 Ruby.
