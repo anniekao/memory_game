@@ -1,5 +1,6 @@
 class Card
     attr_reader :face_value, :face_up
+    
     def initialize (face_value)
         @face_value = face_value
         @face_up = false
@@ -20,4 +21,9 @@ class Card
             puts ""
         end
     end
+
+    def == (card) #test this!
+        self.card == card
+    end
 end
+
