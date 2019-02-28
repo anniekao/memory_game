@@ -19,10 +19,10 @@ class Board
 
     def populate
         container = []
-        @cards.each do |card|
+        cards.each do |card|
             container << card
-            if container.length == 5
-                @board << container
+            if container.length == 4
+                board << container
                 container = []
             end
         end
@@ -30,9 +30,7 @@ class Board
     
     def render
         puts "Memory Board:"
-        @board.each do |row|
-            reveal_board(row)
-        end
+        board.each { |row| puts reveal_board(row).join("   ")}
     end
 
     def reveal_board(row)
@@ -48,5 +46,12 @@ end
 
 game = Board.new()
 game.populate
-game.board[0][1].reveal
-p game.reveal_board(game.board[0])
+game.render
+# game.board[0][1].reveal
+# game.board[3][1].reveal
+# p game.reveal_board(game.board[0])
+# p game.reveal_board(game.board[1])
+# p game.reveal_board(game.board[2])
+# p game.reveal_board(game.board[3])
+# p game.reveal_board(game.board[4])
+
