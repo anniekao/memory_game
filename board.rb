@@ -27,5 +27,12 @@ class Board
             end
         end
     end
+    
+    def render
+        puts "Memory Board:"
+        @boards.each do |row|
+            reveal(row)
+        end
+    end
 end
 
