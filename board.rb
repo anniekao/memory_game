@@ -30,6 +30,7 @@ class Board
     
     def render
         puts "Memory Board:"
+        
     end
 end
 
