@@ -1,10 +1,12 @@
 require_relative 'card.rb'
 
 class Board
-    CARDS = ["A","B","C","D","E","F","G","H"]
-    attr_accessor :cards
+    CARDS = ("A".."J").to_a
+
+    attr_accessor :cards, :board
 
     def initialize
+        @board = []
         @cards = []
         
         CARDS.each do |card|
@@ -14,4 +16,16 @@ class Board
         end
         @cards.shuffle!
     end
+
+    def populate
+        container = []
+        @cards.each do |card|
+            container << card
+            if container.length == 5
+                @board << container
+                container = []
+            end
+        end
+    end
 end
+
