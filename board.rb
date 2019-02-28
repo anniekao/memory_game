@@ -30,9 +30,23 @@ class Board
     
     def render
         puts "Memory Board:"
-        @boards.each do |row|
-            reveal(row)
+        @board.each do |row|
+            reveal_board(row)
+        end
+    end
+
+    def reveal_board(row)
+        row.map do |card|
+            if card.face_up
+                card.face_value
+            else
+                :*
+            end
         end
     end
 end
 
+game = Board.new()
+game.populate
+game.board[0][1].reveal
+p game.reveal_board(game.board[0])
