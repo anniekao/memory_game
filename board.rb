@@ -44,14 +44,4 @@ class Board
     end
 end
 
-game = Board.new()
-game.populate
-game.render
-# game.board[0][1].reveal
-# game.board[3][1].reveal
-# p game.reveal_board(game.board[0])
-# p game.reveal_board(game.board[1])
-# p game.reveal_board(game.board[2])
-# p game.reveal_board(game.board[3])
-# p game.reveal_board(game.board[4])
 
