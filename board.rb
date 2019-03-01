@@ -30,18 +30,52 @@ class Board
     
     def render
         puts "Memory Board:"
-        board.each { |row| puts reveal_board(row).join("   ")}
+        puts " "
+        board.each { |row| puts revealBoard(row).join("   ")}
+        puts " "
     end
 
-    def reveal_board(row)
+    def revealBoard(row)
         row.map do |card|
-            if card.face_up
-                card.face_value
+            if card.faceUp
+                card.faceValue
             else
                 :*
             end
         end
     end
+
+    def revealCard(guessPos)
+        row, col = convertGuessToArray(guessPos)
+        guessedCard = @board[row][col]
+        if guessedCard.faceUp == false
+            guessedCard.reveal
+            return guessedCard.faceValue
+        end
+    end
+
+    def convertGuessToArray(guessPos)
+        guessPos.split(",").map { |num| num.to_i}
+    end
+
+    def won?
+        cards.each do |card|
+            if card.faceUp == false
+                return false
+            end
+        end
+        true
+    end
 end
 
+if __FILE__ == $PROGRAM_NAME
+    game = Board.new()
 
+    game.populate
+    # puts "Please enter the position of the card you'd like to flip (e.g. '2,3') to max '4,3'"
+    # guess = gets.chomp
+    # game.convertGuessToArray(guess)
+    # game.revealCard(guess)
+    # game.render
+
+end
