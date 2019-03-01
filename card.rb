@@ -1,23 +1,23 @@
 class Card
-    attr_reader :face_value, :face_up
-    
-    def initialize (face_value)
-        @face_value = face_value
-        @face_up = false
+    attr_reader :faceValue, :faceUp
+
+    def initialize (faceValue)
+        @faceValue = faceValue
+        @faceUp = false
     end
 
     def hide
-        @face_up = false
+        @faceUp = false
     end
 
     def reveal
-        @face_up = true
+        @faceUp = true
     end
 
-    def display_card
-        if @face_up
-            puts @face_value
-        elsif !@face_up
+    def displayCard
+        if @faceUp
+            puts @faceValue
+        elsif !@faceUp
             puts ""
         end
     end
