@@ -71,7 +71,7 @@ end
 if __FILE__ == $PROGRAM_NAME
     game = Board.new()
 
-    game.populate
+    p game.populate
     # puts "Please enter the position of the card you'd like to flip (e.g. '2,3') to max '4,3'"
     # guess = gets.chomp
     # game.convertGuessToArray(guess)
